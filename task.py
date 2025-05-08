@@ -75,7 +75,7 @@ class TaskManager: #TaskManager is used to manage the tasks in the database
             print("Task not found.")
             return
 
-        print("Leave blank to keep current value.")
+        print("Leave blank if you want to keep the current value.")
         title = input(f"Title [{task['title']}]: ") or task['title']
         description = input(f"Description [{task['description']}]: ") or task['description']
         due_date = input(f"Due Date [{task['due_date']}]: ") or task['due_date']
@@ -115,11 +115,11 @@ class TaskManager: #TaskManager is used to manage the tasks in the database
             print("Task not found.")
 
     def print_task(self, task):
-        print(f"\nID: {task['_id']}")
-        print(f"Title: {task['title']}")
-        print(f"Description: {task['description']}")
-        print(f"Due Date: {task['due_date']}")
-        print(f"Priority: {task['priority']}")
-        print(f"Status: {task['status']}")
-        print(f"Created At: {task['created_at']}")
+        print(f"\nID: {task['_id']}"
+              f"\nTitle: {task['title']}"
+              f"\nDescription: {task['description']}"
+              f"\nDue Date: {task['due_date']}"
+              f"\nPriority: {task['priority']}"
+              f"\nStatus: {task['status']}"
+              f"\nCreated At: {task['created_at']}")
         time.sleep(5) 
